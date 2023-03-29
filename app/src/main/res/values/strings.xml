@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Realm</string>
+    <string name="name">Enter the course name</string>
+    <string name="duration">Enter the course name</string>
+    <string name="track">Enter the course name</string>
+    <string name="description">Enter the course name</string>
+</resources>

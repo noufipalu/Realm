@@ -2,6 +2,7 @@ package com.example.realm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,7 +15,7 @@ import io.realm.Realm;
 public class MainActivity extends AppCompatActivity {
 
     EditText name,duration,track,desc;
-    Button add;
+    Button add, show, edit;
 
     Realm realm;
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         track = findViewById(R.id.track);
         desc = findViewById(R.id.desc);
         add = findViewById(R.id.btn_add);
+        edit = findViewById(R.id.btn_edit);
+        show = findViewById(R.id.btn_show);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,8 +59,24 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //show data in next activity
+        show.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ReadActivity.class));
+            }
+        });
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Update_deleteActivity.class));
+            }
+        });
     }
 
+    //to add data to the database
     private void addToDatabase(String name, String duration, String track, String desc) {
         DataModel dataModel= new DataModel();
         Number id = realm.where(DataModel.class).max("id");

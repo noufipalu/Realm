@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Realm</string>
+
+    <string name="id">Enter the course ID</string>
     <string name="name">Enter the course name</string>
-    <string name="duration">Enter the course name</string>
-    <string name="track">Enter the course name</string>
-    <string name="description">Enter the course name</string>
+    <string name="duration">Enter the course duration</string>
+    <string name="track">Enter the course track</string>
+    <string name="description">Enter the course description</string>
+
+    <string name="showId">Course ID</string>
+    <string name="showname">Course Name</string>
+    <string name="showduration">Course Duration</string>
+    <string name="showtrack">Course Track</string>
+    <string name="showdescription">Course Description</string>
+
+    <string name="spaces">    </string>
 </resources>

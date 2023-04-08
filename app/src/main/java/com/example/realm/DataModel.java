@@ -1,6 +1,7 @@
 package com.example.realm;
 
-import io.realm.Realm;
+import android.database.Cursor;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 

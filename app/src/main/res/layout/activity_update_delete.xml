@@ -5,33 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="25dp"
-    tools:context=".MainActivity">
+    android:layout_margin="20dp"
+    tools:context=".Update_deleteActivity">
+
+    <Button
+        android:id="@+id/backbtn"
+        android:text="X"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COURSE DETAILS"
-        android:textAlignment="center"
-        android:layout_marginTop="90dp"
-        android:textSize="30dp"
-        android:textColor="@color/teal_700"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
-
+        android:text="*Enter only course ID to delete the details
+ *Enter required details for updation"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="18dp"/>
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/udname"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ems="10"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="15dp"
         android:hint="@string/name"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/duration"
+        android:id="@+id/udduration"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ems="10"
@@ -42,7 +50,7 @@
         android:inputType="textPersonName"/>
 
     <EditText
-        android:id="@+id/track"
+        android:id="@+id/udtrack"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ems="10"
@@ -53,7 +61,7 @@
         android:inputType="textPersonName"/>
 
     <EditText
-        android:id="@+id/desc"
+        android:id="@+id/uddesc"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ems="10"
@@ -62,31 +70,28 @@
         android:layout_marginTop="15dp"
         android:hint="@string/description"
         android:inputType="textPersonName"/>
-    <Button
-        android:id="@+id/btn_add"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="SAVE DATA"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="15dp"/>
+        android:orientation="horizontal">
 
     <Button
-        android:id="@+id/btn_show"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:text="SHOW DATA"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp" />
+        android:id="@+id/updatebtn"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7.5dp"
+        android:text="UPDATE DATA"/>
 
     <Button
-        android:id="@+id/btn_edit"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:text="EDIT DATA"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
-
+        android:id="@+id/deletebtn"
+        android:layout_width="165dp"
+        android:layout_marginStart="7.5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_height="wrap_content"
+        android:text="DELETE DATA"/>
+    </LinearLayout>
 </LinearLayout>

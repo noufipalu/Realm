@@ -109,6 +109,10 @@ public class ReadActivity extends AppCompatActivity {
             public void onClick(View v) {
                 long id = Long.parseLong(data_id.getText().toString());
                 DataModel dataModel = realm.where(DataModel.class).equalTo("id", id).findFirst();
+                
+                if (dataModel.getId() == 0){
+                    Toast.makeText(ReadActivity.this, "", Toast.LENGTH_SHORT).show();
+                }
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
@@ -175,6 +179,7 @@ public class ReadActivity extends AppCompatActivity {
                     @Override
                     public void execute(Realm realm) {
                         realm.copyToRealmOrUpdate(dataModel);
+                        Toast.makeText(ReadActivity.this, "Data Updated Successfully", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

@@ -15,7 +15,7 @@ import io.realm.Realm;
 public class MainActivity extends AppCompatActivity {
 
     EditText name,duration,track,desc;
-    Button add, show, edit;
+    Button add, show;
 
     Realm realm;
 
@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         track = findViewById(R.id.track);
         desc = findViewById(R.id.desc);
         add = findViewById(R.id.btn_add);
-        edit = findViewById(R.id.btn_edit);
         show = findViewById(R.id.btn_show);
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -65,13 +64,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ReadActivity.class));
-            }
-        });
-
-        edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Update_deleteActivity.class));
             }
         });
     }

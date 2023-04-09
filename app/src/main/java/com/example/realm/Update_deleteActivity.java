@@ -23,7 +23,7 @@ public class Update_deleteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_delete);
-        //updateDataDialog();
+        updateDataDialog();
 
         update = findViewById(R.id.updatebtn);
         x = findViewById(R.id.backbtn);
@@ -46,7 +46,7 @@ public class Update_deleteActivity extends AppCompatActivity {
         });
     }
 
-    /*private void updateDataDialog() {
+    private void updateDataDialog() {
 
         AlertDialog.Builder al = new AlertDialog.Builder(Update_deleteActivity.this);
         View view = getLayoutInflater().inflate(R.layout.list_data, null);
@@ -66,7 +66,7 @@ public class Update_deleteActivity extends AppCompatActivity {
                 ShowUpdateDialog(dataModel);
             }
         });
-    }*/
+    }
 
     private void deleteData() {
         AlertDialog.Builder al = new AlertDialog.Builder(Update_deleteActivity.this);
@@ -93,7 +93,7 @@ public class Update_deleteActivity extends AppCompatActivity {
         });
     }
 
-    /*private void ShowUpdateDialog(DataModel dataModel){
+    private void ShowUpdateDialog(DataModel dataModel){
         AlertDialog.Builder al = new AlertDialog.Builder(Update_deleteActivity.this);
         View view = getLayoutInflater().inflate(R.layout.activity_update_delete, null);
         al.setView(view);
@@ -128,5 +128,5 @@ public class Update_deleteActivity extends AppCompatActivity {
                 });
             }
         });
-    }*/
+    }
 }

@@ -170,14 +170,14 @@ public class ReadActivity extends AppCompatActivity {
             public void onClick(View v) {
                 alertDialog.dismiss();
 
-                dataModel.setC_name(name.getText().toString());
-                dataModel.setC_duration(dur.getText().toString());
-                dataModel.setC_track(track.getText().toString());
-                dataModel.setC_desc(desc.getText().toString());
-
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
+                        dataModel.setC_name(name.getText().toString());
+                        dataModel.setC_duration(dur.getText().toString());
+                        dataModel.setC_track(track.getText().toString());
+                        dataModel.setC_desc(desc.getText().toString());
+
                         realm.copyToRealmOrUpdate(dataModel);
                         Toast.makeText(ReadActivity.this, "Data Updated Successfully", Toast.LENGTH_SHORT).show();
                     }
